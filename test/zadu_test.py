@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append('../src')
+sys.path.append("../src")
 sys.path.append("../legacy")
 
 from zadu import zadu
@@ -8,7 +8,6 @@ from zadu import zadu
 from sklearn.datasets import load_iris, load_digits
 
 from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
 
 digits, digits_label = load_digits(return_X_y=True)
 iris, iris_label = load_iris(return_X_y=True)
@@ -21,44 +20,37 @@ iris_pca = pca.fit_transform(iris)
 # digits_tsne = TSNE(n_components=2).fit_transform(digits)
 
 
-
 spec_list = [
-  # {
-  #   "id": "tnc",
-  #   "params": {
-	# 		"k": 25
-	# 	}
-	# },
-  # {
-  #   "id": "ca_tnc",
-	# 	"params": {
-	# 		"k": 30
-	# 	}       
-	# },
-  # {
-  #   "id": "dtm"
-	# },
-  # {
-  #   "id": "neighbor_dissimilarity",
-  #   "params": {
-	# 		"k": 50
-	# 	}
-	# },
-  # {
-  #   "id": "snc",
-  #   "params": { "k": 60, "iteration": 300}
-	# },
-  {
-    "id": "l_tnc",
-    "params": { "cvm": "ch_btw"}
-	},
-	{
-    "id": "l_tnc",
-    "params": { "cvm": "dsc"}		
-	}
-	# {
-  #     "id": "stress"
-	# }
+    # {
+    #   "id": "tnc",
+    #   "params": {
+    # 		"k": 25
+    # 	}
+    # },
+    # {
+    #   "id": "ca_tnc",
+    # 	"params": {
+    # 		"k": 30
+    # 	}
+    # },
+    # {
+    #   "id": "dtm"
+    # },
+    # {
+    #   "id": "neighbor_dissimilarity",
+    #   "params": {
+    # 		"k": 50
+    # 	}
+    # },
+    # {
+    #   "id": "snc",
+    #   "params": { "k": 60, "iteration": 300}
+    # },
+    {"id": "l_tnc", "params": {"cvm": "ch_btw"}},
+    {"id": "l_tnc", "params": {"cvm": "dsc"}}
+    # {
+    #     "id": "stress"
+    # }
 ]
 
 # specs = {

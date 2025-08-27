@@ -1,9 +1,8 @@
 import sys
 
-sys.path.append('../src/zadu')
+sys.path.append("../src/zadu")
 sys.path.append("../legacy")
 
-import provider as prov
 
 from sklearn.datasets import load_iris, load_digits
 
@@ -23,9 +22,10 @@ tsne = TSNE(n_components=2)
 digits_tsne = tsne.fit_transform(digits)
 iris_tsne = tsne.fit_transform(iris)
 
-from provider import MDPMetricProvider
-from measures import trustworthiness_continuity, mean_relative_rank_error, class_aware_trustworthiness_continuity
-from measures import local_continuity_meta_criteria, neighborhood_hit, distance_consistency
+from measures import (
+    neighborhood_hit,
+)
+
 # from measures.class_aware_trustworthiness_continuity import class_aware_trustworthiness_continuity
 # from measures.mean_relative_rank_error import mean_relative_rank_error
 # from measures.local_continuity_meta_criteria import local_continuity_meta_criteria
@@ -52,7 +52,7 @@ from measures import local_continuity_meta_criteria, neighborhood_hit, distance_
 # print(local_continuity_meta_criteria.run(digits, digits_pca, 50))
 # print(local_continuity_meta_criteria.run(digits, digits_tsne, 50))
 
-print(neighborhood_hit.run( digits_pca, digits_label, 20))
+print(neighborhood_hit.run(digits_pca, digits_label, 20))
 print(neighborhood_hit.run(digits_tsne, digits_label, 20))
 
 
