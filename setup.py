@@ -7,7 +7,7 @@ print(setuptools.find_packages(where="src"))
 
 setuptools.setup(
     name="zadu",
-    version="0.2.0",
+    version="0.3.0",
     author="Hyeon Jeon",
     author_email="hj@hcil.snu.ac.kr",
     description="A Python Toolkit for Evaluating the Reliability of Dimensionality Reduction Embeddings",
@@ -29,5 +29,5 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=["zadu", "zaduvis", "zadu.measures", "zadu.measures.utils"],
-    python_requires=">=3.9.0",
+    python_requires=">=3.10.0",
 )
