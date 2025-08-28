@@ -1,9 +1,8 @@
 import sys
 
-sys.path.append('../src')
+sys.path.append("../src")
 sys.path.append("../legacy")
 
-import provider as prov
 
 from sklearn.datasets import load_iris, load_digits
 
