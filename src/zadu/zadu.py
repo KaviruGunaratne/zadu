@@ -25,6 +25,8 @@ class ZADU:
         "topo": "topographic_product",
         "proc": "procrustes",
         "stress": "stress",
+        "sn_stress": "scale_normalized_stress",
+        "nm_stress": "non_metric_stress"
     }
 
     DEFAULT_K = 20

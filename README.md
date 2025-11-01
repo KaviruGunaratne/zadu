@@ -116,8 +116,8 @@ Each dictionary must contain the following keys:
 > | Measure | ID | Parameters | Range | Optimum |
 > |---------|----|------------|-------|---------|
 > | Stress | stress | | R+ | 0 |
-> | Non-metric stress | | R+ | 0 |
-> | Scale-normalized stress | | R+ | 0 |
+> | Non-metric stress | nm_stress| | R+ | 0 |
+> | Scale-normalized stress | sn_stress | | R+ | 0 |
 > | Kullback-Leibler Divergence | kl_div | `sigma=0.1` | R+ | 0 |
 > | Distance-to-Measure | dtm | `sigma=0.1` | R+ | 0 |
 > | Topographic Product | topo | `k=20` | R | 0 |
@@ -220,7 +220,7 @@ zaduvis.reliability_map(ld, local_steadiness, local_cohesiveness, k=10, ax=ax[3]
 
 
 ```
-The above code snippet demonstrates how to visualize local pointwise distortions using CheckViz and Reliability Map plots.
+The above code snippet demonstrates how to visualize local pointwise distortions using CheckViz and Reliability Map plots, where the results are shown below.
 
 ![mnist_1:7](https://github.com/hj-n/zadu/assets/37105201/7c6dc8d7-59c5-48fd-92a5-186e1e44597a)
 
@@ -233,16 +233,14 @@ For more information about the available distortion measures, their use cases, a
 > Hyeon Jeon, Aeri Cho, Jinhwa Jang, Soohyun Lee, Jake Hyun, Hyung-Kwon Ko, Jaemin Jo, and Jinwook Seo. Zadu: A python library for evaluating the reliability of dimensionality reduction embeddings. In 2023 IEEE Visualization and Visual Analytics (VIS), 2023. to appear.
 
 ```bib
-@inproceedings{jeon23vis,
+@INPROCEEDINGS{jeon23vis,
   author={Jeon, Hyeon and Cho, Aeri and Jang, Jinhwa and Lee, Soohyun and Hyun, Jake and Ko, Hyung-Kwon and Jo, Jaemin and Seo, Jinwook},
   booktitle={2023 IEEE Visualization and Visual Analytics (VIS)}, 
   title={ZADU: A Python Library for Evaluating the Reliability of Dimensionality Reduction Embeddings}, 
   year={2023},
   volume={},
   number={},
-  pages={},
-  doi={},
-  note={to appear}
-}
+  pages={196-200},
+  keywords={Dimensionality reduction;Visual analytics;Design methodology;Distortion;Libraries;Time measurement;Distortion measurement;Human-centered computing;Visualization;Visualization design and evaluation methods},
+  doi={10.1109/VIS54172.2023.00048}}
 ```
-
